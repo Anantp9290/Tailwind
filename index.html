@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind</title>
+    <link rel="stylesheet" href="./dist/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        #menu-toggle:checked+#menu {
+              display: block;
+              transition-duration: .5s;
+              transition-timing-function: cubic-bezier(0, 0, .2, 1);
+              transition-property: all;
+          }
+          .swiper-slide-next {
+            background-color: #fb923c !important;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: #fb923c;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: #fb923c;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+</head>
+<body>
+    
+    <header>
+        <nav class="flex items-center justify-between flex-wrap bg-slate-700 overflow-hidden md:px-0 px-3">
+            <div class="container w-full mx-auto flex justify-between flex-wrap items-center">
+                <div class="flex items-center flex-shrink-0 text-white mr-6">
+                    <div class="bg-orange-400 p-[20px] lg:skew-x-[-25deg]">
+                        <a href="#" class="lg:skew-x-[20deg] block font-bold text-2xl text-slate-700 uppercase font-['Poppins']">Buildream</a>
+                    </div>
+                </div>
+
+                <label class="lg:hidden cursor-pointer flex items-center px-3 h-10 py-2 border rounded text-teal-200 border-white hover:text-white hover:border-white" for="menu-toggle"><svg class="fill-current text-white h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                    </svg></label>
+                <input class="hidden" type="checkbox" id="menu-toggle">
+
+                <div class="hidden w-full  flex-grow lg:flex lg:items-center lg:w-auto justify-end " id="menu">
+                    <div>
+                        <ul class="flex gap-[10px] lg:skew-x-[-25deg] uppercase font-[600] text-slate-700 flex-col lg:flex-row lg:mt-0 mt-3 cursor-pointer ">
+                            <li class=" bg-orange-400 lg:p-6 p-1 hover:translate-x-3 transition duration-500 hover:bg-orange-100 ">
+                                <i class="block lg:skew-x-[35deg]">home</i>
+                            </li>
+                            <li class=" bg-orange-400 lg:p-6 p-1 hover:translate-x-3 transition duration-500 hover:bg-orange-100">
+                                <i class="block lg:skew-x-[35deg]">about</i>
+                            </li>
+                            <li class=" bg-orange-400 lg:p-6 p-1 hover:translate-x-3 transition duration-500 hover:bg-orange-100">
+                                <i class="block lg:skew-x-[35deg]">services</i>
+                            </li>
+                            <li class=" bg-orange-400 lg:p-6 p-1 hover:translate-x-3 transition duration-500 hover:bg-orange-100">
+                                <i class="block lg:skew-x-[35deg]">pricing</i>
+                            </li>
+
+                            <li class=" bg-orange-400 lg:p-6 p-1 hover:translate-x-3 transition duration-500 hover:bg-orange-100 mb-3 lg:mb-0">
+                                <i class="block lg:skew-x-[35deg]">contact</i>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <section>
+        <div class="flex items-center justify-center  md:pt-96 pt-60 md:pb-96 pb-60 bg-fixed bg-center bg-cover bg-[url('/Images/bg-bul.jpg')] relative">
+            <div class="h-full w-full absolute   backdrop-brightness-50 bg-black/40">
+                <div class="flex flex-col items-center h-full justify-center">
+                    <p class="text-white text-lg">----- SINCE 1982 -----</p>
+                    <h4 class="md:text-7xl text-2xl text-white font-bold w-3/5 text-center pt-3">WE WILL  BE <span class="text-orange-500"> HAPPY</span>  TO TAKE CARE OF YOUR WORK</h4>
+                    <div class="flex md:flex-row flex-col mt-8">
+                        <button class="bg-orange-500 text-white md:p-4 p-3 hover:bg-slate-700 md:mb-0 mb-4">Contact us <i class="fa-solid fa-right-long ml-3"></i></button>
+                        <button class="bg-slate-700 text-white md:p-4 p-3 hover:bg-orange-500 md:ml-3 ml-0">Request A Quote  <i class="fa-solid fa-right-long ml-3"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class=" container mx-auto flex lg:flex-row flex-col md:py-20 py-10 md:px-0 px-3 h-full w-full gap-5">
+            <div>
+                <img src="./Images/slider2.jpg" class="h-full img-fluid">
+            </div>
+            <div>
+                <div class="px-3">
+                    <p class="text-orange-500 text-lg font-semibold">Welcome to Buildream</p>
+                    <h2 class="text-gray-700 md:text-6xl text-4xl  mt-3">Quality and Affordable Constructor</h2>
+                    <p class="text-slate-700 mt-3">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                    <h4 class="text-2xl text-gray-700 my-4">We Can Help You</h4>
+                </div>
+                <div>
+                    <div class="flex md:flex-row flex-col">
+                        <div class="p-4 group hover:bg-slate-700 ">
+                            <div class="flex  ">
+                                <div class="lg:text-6xl text-4xl  text-orange-500 group-hover:text-white">
+                                    <i class="fa-solid fa-pen-ruler"></i>
+                                </div>
+                                <div class="px-4">
+                                    <h2 class="text-2xl text-gray-700 mb-0.5 group-hover:text-white">Construction</h2>
+                                    <p class="text-slate-700 capitalize text-base group-hover:text-white">Far far away, behind the word mountains.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4 group hover:bg-slate-700">
+                            <div class="flex">
+                                <div class="lg:text-6xl text-4xl  text-orange-500 group-hover:text-white">
+                                    <i class="fa-solid fa-sitemap"></i>
+                                </div>
+                                <div class="px-4">
+                                    <h2 class="text-2xl text-gray-700 mb-0.5 group-hover:text-white">Architecture</h2>
+                                    <p class="text-slate-700 capitalize text-base group-hover:text-white">Far far away, behind the word mountains.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex md:flex-row flex-col">
+                        <div class="p-4 group hover:bg-slate-700">
+                            <div class="flex">
+                                <div class="lg:text-6xl text-4xl text-orange-500 group-hover:text-white">
+                                    <i class="fa-solid fa-paint-roller"></i>
+                                </div>
+                                <div class="px-4">
+                                    <h2 class="text-2xl text-gray-700 mb-0.5 group-hover:text-white">Consulting</h2>
+                                    <p class="text-slate-700 capitalize text-base group-hover:text-white">Far far away, behind the word mountains.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4 group hover:bg-slate-700">
+                            <div class="flex">
+                                <div class="lg:text-6xl text-4xl  text-orange-500 group-hover:text-white">
+                                    <i class="fa-solid fa-toolbox"></i>
+                                </div>
+                                <div class="px-4">
+                                    <h2 class="text-2xl text-gray-700 mb-0.5 group-hover:text-white">Mechanical</h2>
+                                    <p class="text-slate-700 capitalize text-base group-hover:text-white">Far far away, behind the word mountains.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <section class="  h-full  bg-fixed bg-center bg-cover bg-[url('/Images/slider3.jpg')]">
+        <div>
+            <div class="grid md:grid-cols-2 grid-cols-1">
+                <div class="bg-orange-500 md:p-20 p-10 text-2xl text-white">
+                    <p>YOU MAY CONTACT US FOR CONSTRUCTION & RENOVATION WORK</p>
+                    <h3>We Are Great Construction Company</h3>
+                </div>
+                <div class="h-full w-full flex items-center justify-center bg-black/40 md:p-0 p-14">
+                    <button class="bg-orange-500 p-4 text-white hover:bg-slate-700 transition duration-500 uppercase  font-bold" type="button">Request A Quote <i class="fa-solid fa-right-long ml-3"></i> </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container mx-auto md:py-36 py-20">
+        <p class="text-base text-orange-400  text-center mb-2">What We Do</p>
+        <h4 class="text-4xl text-gray-700 text-center font-semibold mb-10">Services</h4>
+        <div class="grid md:grid-cols-2 grid-cols-1 gap-5">
+            <div class="w-full  lg:px-8 bg-[url('/Images/slider3.jpg')] bg-right bg-cover md:h-full h-[250px] ">
+            </div>
+            <!-- <div class="w-full lg:px-8 ">
+                <img src="./Images/slider3.jpg" class="h-full object-auto">
+            </div> -->
+            <div class="">
+                <div class="flex sm:flex-row flex-col p-7 bg-slate-700 text-white drop-shadow-lg">
+                    <div class="md:text-5xl text-4xl flex-1 mr-3">
+                        <i class="fa-solid fa-paint-roller"></i>
+                    </div>
+                    <div class="md:mx-3 mx-0 break-words">
+                        <h2 class="text-3xl mb-3">Construction Services</h2>
+                        <p class="mb-4 font-[200]">Far far away, behind the word mountains, far from the countries
+                            Vokalia and
+                            Consonantia, there live the blind.</p>
+                        <button class="bg-white px-3 py-1 text-orange-400 hover:bg-slate-700 transition duration-500 uppercase mb-3" type="button">Learn More </button>
+
+                    </div>
+                </div>
+                <div class="flex sm:flex-row flex-col p-7 mt-5 bg-orange-400 text-white drop-shadow-lg">
+                    <div class="md:text-5xl text-4xl flex-1 mr-3">
+                        <i class="fa-solid fa-folder-tree"></i>
+                    </div>
+                    <div class="md:mx-3 mx-0 break-words">
+                        <h2 class="text-3xl mb-3">Infrastructure Services</h2>
+                        <p class="mb-4 font-[200]">Far far away, behind the word mountains, far from the countries
+                            Vokalia and
+                            Consonantia, there live the blind.</p>
+                        <button class="bg-white px-3 py-1 text-orange-400 hover:bg-slate-700 transition duration-500 uppercase mb-3" type="button">Learn More </button>
+
+                    </div>
+                </div>
+                <div class="flex sm:flex-row flex-col p-7 mt-5 bg-orange-300 text-white drop-shadow-lg">
+                    <div class="md:text-5xl text-4xl flex-1 mr-3">
+                        <i class="fa-solid fa-helmet-safety"></i>
+                    </div>
+                    <div class="md:mx-3 mx-0 break-words">
+                        <h2 class="text-3xl mb-3">Architecture Services</h2>
+                        <p class="mb-4 font-[200]">Far far away, behind the word mountains, far from the countries
+                            Vokalia and
+                            Consonantia, there live the blind.</p>
+                        <button class="bg-white px-3 py-1 text-orange-300 hover:bg-slate-700 transition duration-500 uppercase mb-3" type="button">Learn More </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class=" h-full  bg-fixed bg-center bg-cover bg-[url('/Images/slider3.jpg')]">
+        <div class="grid xl:grid-cols-4 lg:grid-cols-2 grid-cols-1 xl:gap-y-0 gap-y-5 md:p-28 p-8 bg-black/40">
+            
+            <div class="flex">
+                <div class="mr-3 text-5xl text-orange-500">
+                    <i class="fa-solid fa-helmet-safety"></i>
+                </div>
+                <div>
+                    <h2 class="text-5xl text-orange-500">3,000</h2>
+                    <p class="text-white font-semibold md:text-base text-sm">COMPLETED PROJECTS</p>
+                </div>
+            </div>
+            <div class="flex">
+                <div class="mr-3 text-5xl text-orange-500">
+                    <i class="fa-solid fa-helmet-safety"></i>
+                </div>
+                <div>
+                    <h2 class="text-5xl text-orange-500">320</h2>
+                    <p class="text-white font-semibold md:text-base text-sm">HAPPY CLIENTS</p>
+                </div>
+            </div>
+            <div class="flex">
+                <div class="mr-3 text-5xl text-orange-500">
+                    <i class="fa-solid fa-helmet-safety"></i>
+                </div>
+                <div>
+                    <h2 class="text-5xl text-orange-500">1,000</h2>
+                    <p class="text-white font-semibold md:text-base text-sm">CUP OF COFFEE</p>
+                </div>
+            </div>
+            <div class="flex">
+                <div class="mr-3 text-5xl text-orange-500">
+                    <i class="fa-solid fa-helmet-safety"></i>
+                </div>
+                <div>
+                    <h2 class="text-5xl text-orange-500">587</h2>
+                    <p class="text-white font-semibold md:text-base text-sm">ENGINEERS & STAFFS</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container mx-auto md:py-36 py-10">
+        <p class="text-base text-orange-400  text-center mb-2"> Team & Staff</p>
+        <h4 class="md:text-4xl text-2xl text-gray-700 text-center font-semibold mb-10">Qualified Engineers</h4>
+        <div class="flex lg:flex-row flex-col">
+            <div class="flex md:flex-row flex-col">
+                <div class="m-3 pb-5 transform duration-500 hover:-translate-y-1 shadow-xl group hover:bg-orange-400">
+                    <div  class=" overflow-hidden">
+                        <img src="./Images/card1.jpg" class="group-hover:scale-110 transform duration-500">
+                    </div>
+                    <p class="text-xl text-center text-slate-700 my-5">Lionel Wurtchbach</p>
+                    <p class="text-gray-700 text-center group-hover:text-white">SENIOR ENGINEER</p>
+                </div>
+                <div class="m-3 pb-5 transform duration-500 hover:-translate-y-1 shadow-xl  group hover:bg-orange-400">
+                    <div  class=" overflow-hidden">
+                        <img src="./Images/card2.jpg" class="group-hover:scale-110 transform duration-500">
+                    </div>
+                    <p class="text-xl text-center text-slate-700 my-5">Lionel Wurtchbach</p>
+                    <p class="text-gray-700 text-center group-hover:text-white">SENIOR ENGINEER</p>
+                </div>
+            </div>
+            <div class="flex md:flex-row flex-col">
+                <div class="m-3 pb-5 transform duration-500 hover:-translate-y-1 shadow-xl  group hover:bg-orange-400">
+                    <div class=" overflow-hidden">
+                        <img src="./Images/card3.jpg" class="group-hover:scale-110 transform duration-500">
+                    </div>
+                    <p class="text-xl text-center text-slate-700 my-5">Lionel Wurtchbach</p>
+                    <p class="text-gray-700 text-center group-hover:text-white">SENIOR ENGINEER</p>
+                </div>
+                <div class="m-3 pb-5 transform duration-500 hover:-translate-y-1 shadow-xl  group hover:bg-orange-400">
+                    <div  class=" overflow-hidden">
+                        <img src="./Images/card4.jpg" class="group-hover:scale-110 transform duration-500">
+                    </div>
+                    <p class="text-xl text-center text-slate-700 my-5">Lionel Wurtchbach</p>
+                    <p class="text-gray-700 text-center group-hover:text-white">SENIOR ENGINEER</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <p class="text-base text-orange-400  text-center mb-2"> Portfolio</p>
+        <h4 class="md:text-4xl text-2xl text-gray-700 text-center font-semibold mb-10">Projects</h4>
+        <div class="flex md:flex-row flex-col">
+            <div class=" bg-[url('/Images/g1.jpg')] bg-cover bg-center w-full group ">
+                <div class="pt-72 pb-16 px-10 bg-black bg-opacity-20 hover:bg-opacity-75 duration-300">
+                    <p class="text-white text-3xl mb-3 transform  translate-y-16 group-hover:translate-y-0 duration-300">Lionel Wurt</p>
+                    <div class="w-16 h-2 bg-orange-400 rounded-full mb-2 translate-y-16 group-hover:translate-y-0 duration-300 ">
+                    </div>
+                    <p class="text-white mb-5 transform  translate-y-16 group-hover:translate-y-0 duration-300 opacity-0 group-hover:opacity-100">Lorem ipsum dolor sit amet consectetur</p>
+                </div>
+            </div>
+            <div class=" bg-[url('/Images/g2.jpg')] bg-cover bg-center w-full group">
+                <div class="pt-72 pb-16 px-10 bg-black bg-opacity-20 hover:bg-opacity-75 duration-300">
+                    <p class="text-white text-3xl mb-3 transform  translate-y-16 group-hover:translate-y-0 duration-300">Mike Nintido</p>
+                    <div class="w-16 h-2 bg-orange-400 rounded-full mb-2 translate-y-16 group-hover:translate-y-0 duration-300 ">
+                    </div>
+                    <p class="text-white mb-5 transform  translate-y-16 group-hover:translate-y-0 duration-300 opacity-0 group-hover:opacity-100">Lorem ipsum dolor sit amet consectetur</p>
+                </div>
+            </div>
+            <div class=" bg-[url('/Images/g3.jpg')] bg-cover bg-center w-full group">
+                <div class="pt-72 pb-16 px-10 bg-black bg-opacity-20 hover:bg-opacity-75 duration-300">
+                    <p class="text-white text-3xl mb-3 transform  translate-y-16 group-hover:translate-y-0 duration-300">Mike Nintido</p>
+                    <div class="w-16 h-2 bg-orange-400 rounded-full mb-2 translate-y-16 group-hover:translate-y-0 duration-300 ">
+                    </div>
+                    <p class="text-white mb-5 transform  translate-y-16 group-hover:translate-y-0 duration-300 opacity-0 group-hover:opacity-100">Lorem ipsum dolor sit amet consectetur</p>
+                </div>
+            </div>
+        </div>
+        <div class="flex md:flex-row flex-col">
+            <div class=" bg-[url('/Images/g4.jpg')] bg-cover bg-center w-full group ">
+                <div class="pt-72 pb-16 px-10 bg-black bg-opacity-20 hover:bg-opacity-75 duration-300">
+                    <p class="text-white text-3xl mb-3 transform  translate-y-16 group-hover:translate-y-0 duration-300">Lionel Wurt</p>
+                    <div class="w-16 h-2 bg-orange-400 rounded-full mb-2 translate-y-16 group-hover:translate-y-0 duration-300 ">
+                    </div>
+                    <p class="text-white mb-5 transform  translate-y-16 group-hover:translate-y-0 duration-300 opacity-0 group-hover:opacity-100">Lorem ipsum dolor sit amet consectetur</p>
+                </div>
+            </div>
+            <div class=" bg-[url('/Images/g5.jpg')] bg-cover bg-center w-full group">
+                <div class="pt-72 pb-16 px-10 bg-black bg-opacity-20 hover:bg-opacity-75 duration-300">
+                    <p class="text-white text-3xl mb-3 transform  translate-y-16 group-hover:translate-y-0 duration-300">Mike Nintido</p>
+                    <div class="w-16 h-2 bg-orange-400 rounded-full mb-2 translate-y-16 group-hover:translate-y-0 duration-300 ">
+                    </div>
+                    <p class="text-white mb-5 transform  translate-y-16 group-hover:translate-y-0 duration-300 opacity-0 group-hover:opacity-100">Lorem ipsum dolor sit amet consectetur</p>
+                </div>
+            </div>
+            <div class=" bg-[url('/Images/g6.jpg')] bg-cover bg-center w-full group">
+                <div class="pt-72 pb-16 px-10 bg-black bg-opacity-20 hover:bg-opacity-75 duration-300">
+                    <p class="text-white text-3xl mb-3 transform  translate-y-16 group-hover:translate-y-0 duration-300">Mike Nintido</p>
+                    <div class="w-16 h-2 bg-orange-400 rounded-full mb-2 translate-y-16 group-hover:translate-y-0 duration-300 ">
+                    </div>
+                    <p class="text-white mb-5 transform  translate-y-16 group-hover:translate-y-0 duration-300 opacity-0 group-hover:opacity-100">Lorem ipsum dolor sit amet consectetur</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container mx-auto md:py-36 py-20">
+        <p class="text-base text-orange-400  text-center mb-2">Our Pricing</p>
+        <h4 class="md:text-4xl text-3xl text-gray-700 text-center font-semibold mb-10">Pricing & Packages</h4>
+        <div class="flex lg:flex-row flex-col container mx-auto gap-5">
+            <div class="flex gap-5 md:flex-row flex-col">
+                <div class="bg-white shadow-xl p-5 text-center hover:drop-shadow-lg transition duration-300 mx-3 my-3">
+                    <p class="uppercase font-bold text-gray-700 mb-5">Basic Plan</p>
+                    <p>
+                        <sup class="text-xl">$</sup>
+                        <span class="text-5xl font-bold text-orange-400">49K</span>
+                    </p>
+                    <div>
+                        <p class="text-slate-700 my-5">Far far away, behind the word mountains, far from the countries
+                            Vokalia and Consonantia,
+                            there live the blind texts.</p>
+                    </div>
+                    <button type="button" class="bg-orange-500 p-4 text-white w-full hover:bg-slate-700 transition duration-300">Get Started</button>
+                </div>
+                <div class="bg-white shadow-xl p-5 text-center hover:drop-shadow-lg transition duration-300 mx-3 my-3">
+                    <p class="uppercase font-bold text-gray-700 mb-5">Basic Plan</p>
+                    <p>
+                        <sup class="text-xl">$</sup>
+                        <span class="text-5xl font-bold text-orange-400">49K</span>
+                    </p>
+                    <div>
+                        <p class="text-slate-700 my-5">Far far away, behind the word mountains, far from the countries
+                            Vokalia and Consonantia,
+                            there live the blind texts.</p>
+                    </div>
+                    <button type="button" class="bg-orange-500 p-4 text-white w-full hover:bg-slate-700 transition duration-300">Get Started</button>
+                </div>
+            </div>
+            <div class="flex gap-5 md:flex-row flex-col">
+                <div class="bg-white shadow-xl p-5 text-center hover:drop-shadow-lg transition duration-300 mx-3 my-3">
+                    <p class="uppercase font-bold text-gray-700 mb-5">Basic Plan</p>
+                    <p>
+                        <sup class="text-xl">$</sup>
+                        <span class="text-5xl font-bold text-orange-400">49K</span>
+                    </p>
+                    <div>
+                        <p class="text-slate-700 my-5">Far far away, behind the word mountains, far from the countries
+                            Vokalia and Consonantia,
+                            there live the blind texts.</p>
+                    </div>
+                    <button type="button" class="bg-orange-500 p-4 text-white w-full hover:bg-slate-700 transition duration-300">Get Started</button>
+                </div>
+                <div class="bg-white shadow-xl p-5 text-center hover:drop-shadow-lg transition duration-300 mx-3 my-3">
+                    <p class="uppercase font-bold text-gray-700 mb-5">Basic Plan</p>
+                    <p>
+                        <sup class="text-xl">$</sup>
+                        <span class="text-5xl font-bold text-orange-400">49K</span>
+                    </p>
+                    <div>
+                        <p class="text-slate-700 my-5">Far far away, behind the word mountains, far from the countries
+                            Vokalia and Consonantia,
+                            there live the blind texts.</p>
+                    </div>
+                    <button type="button" class="bg-orange-500 p-4 text-white w-full hover:bg-slate-700 transition duration-300">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="md:pb-36 pb-20">
+        <div class="container p-3 mx-auto swiper mySwiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+            <p class="text-center text-orange-400 mb-3"> Testimonial</p>
+            <h4 class="text-center text-gray-700 text-5xl mb-16 font-[500]">Happy Clients</h4>
+            <div class="mb-16 swiper-wrapper" id="swiper-wrapper-fc8af1a807aed2c7" aria-live="off" style="transition-duration: 0ms; transform: translate3d(-3565.33px, 0px, 0px);"><div class="swiper-slide bg-orange-100 swiper-slide-duplicate" role="group" aria-label="2 / 4" style="width: 493.333px; margin-right: 16px;" data-swiper-slide-index="1">
+                    <div class="p-9 text-gray-800 m-3">
+                        <div class="mb-2">
+                            <div class="item tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+                                <div>
+                                    <div class="text-gray-800">
+                                        <div class="mb-4 flex items-center ">
+                                            <div class="rounded-full w-20 h-20 bg-cover bg-center bg-[url('/Images/g6.jpg')] relative">
+                                                <div class=" absolute bottom-0 right-0 text-xl bg-white h-7 w-7 rounded-full flex items-center justify-center">
+                                                    <span class="text-orange-400 fa fa-quote-left"></span>
+                                                </div>
+                                            </div>
+                                            <div class="ps-3 ml-3">
+                                                <p class="name text-xl font-[600] uppercase">oger Scott</p>
+                                                <span class="position text-slate-700">Marketing Manager</span>
+                                            </div>
+                                        </div>
+                                        <p class="mb-4 msg">Far far away, behind the word mountains, far from the
+                                            countries Vokalia and Consonantia, there live the blind texts.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="swiper-slide bg-orange-100 swiper-slide-duplicate" role="group" aria-label="3 / 4" style="width: 493.333px; margin-right: 16px;" data-swiper-slide-index="2">
+                    <div class="p-9 text-gray-800 m-3">
+                        <div class="mb-2">
+                            <div class="item tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+                                <div>
+                                    <div class="text-gray-800">
+                                        <div class="mb-4 flex items-center ">
+                                            <div class="rounded-full w-20 h-20 bg-cover bg-center bg-[url('/Images/g6.jpg')] relative">
+                                                <div class=" absolute bottom-0 right-0 text-xl bg-white h-7 w-7 rounded-full flex items-center justify-center">
+                                                    <span class="text-orange-400 fa fa-quote-left"></span>
+                                                </div>
+                                            </div>
+                                            <div class="ps-3 ml-3">
+                                                <p class="name text-xl font-[600] uppercase">Roger Scott</p>
+                                                <span class="position text-slate-700">Marketing Manager</span>
+                                            </div>
+                                        </div>
+                                        <p class="mb-4 msg">Far far away, behind the word mountains, far from the
+                                            countries Vokalia and Consonantia, there live the blind texts.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="swiper-slide bg-orange-100 swiper-slide-duplicate swiper-slide-duplicate-prev" role="group" aria-label="4 / 4" style="width: 493.333px; margin-right: 16px;" data-swiper-slide-index="3">
+                    <div class="p-9 text-gray-800 m-3">
+                        <div class="mb-2">
+                            <div class="item tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+                                <div>
+                                    <div class="text-gray-800">
+                                        <div class="mb-4 flex items-center ">
+                                            <div class="rounded-full w-20 h-20 bg-cover bg-center bg-[url('/Images/g6.jpg')] relative">
+                                                <div class=" absolute bottom-0 right-0 text-xl bg-white h-7 w-7 rounded-full flex items-center justify-center">
+                                                    <span class="text-orange-400 fa fa-quote-left"></span>
+                                                </div>
+                                            </div>
+                                            <div class="ps-3 ml-3">
+                                                <p class="name text-xl font-[600] uppercase">Roger Scott</p>
+                                                <span class="position text-slate-700">Marketing Manager</span>
+                                            </div>
+                                        </div>
+                                        <p class="mb-4 msg">Far far away, behind the word mountains, far from the
+                                            countries Vokalia and Consonantia, there live the blind texts.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide bg-orange-100 swiper-slide-duplicate-active" role="group" aria-label="1 / 4" style="width: 493.333px; margin-right: 16px;" data-swiper-slide-index="0">
+                    <div class="p-9 text-gray-800 m-3">
+                        <div class="mb-2">
+                            <div class="item tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+                                <div>
+                                    <div class="text-gray-800">
+                                        <div class="mb-4 flex items-center ">
+                                            <div class="rounded-full w-20 h-20 bg-cover bg-center bg-[url('/Images/g6.jpg')] relative">
+                                                <div class=" absolute bottom-0 right-0 text-xl bg-white h-7 w-7 rounded-full flex items-center justify-center">
+                                                    <span class="text-orange-400 fa fa-quote-left"></span>
+                                                </div>
+                                            </div>
+                                            <div class="ps-3 ml-3">
+                                                <p class="name text-xl font-[600] uppercase">Roger Scott</p>
+                                                <span class="position text-slate-700">Marketing Manager</span>
+                                            </div>
+                                        </div>
+                                        <p class="mb-4 msg">Far far away, behind the word mountains, far from the
+                                            countries Vokalia and Consonantia, there live the blind texts.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide bg-orange-100 swiper-slide-duplicate-next" role="group" aria-label="2 / 4" style="width: 493.333px; margin-right: 16px;" data-swiper-slide-index="1">
+                    <div class="p-9 text-gray-800 m-3">
+                        <div class="mb-2">
+                            <div class="item tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+                                <div>
+                                    <div class="text-gray-800">
+                                        <div class="mb-4 flex items-center ">
+                                            <div class="rounded-full w-20 h-20 bg-cover bg-center bg-[url('/Images/g6.jpg')] relative">
+                                                <div class=" absolute bottom-0 right-0 text-xl bg-white h-7 w-7 rounded-full flex items-center justify-center">
+                                                    <span class="text-orange-400 fa fa-quote-left"></span>
+                                                </div>
+                                            </div>
+                                            <div class="ps-3 ml-3">
+                                                <p class="name text-xl font-[600] uppercase">Roger Scott</p>
+                                                <span class="position text-slate-700">Marketing Manager</span>
+                                            </div>
+                                        </div>
+                                        <p class="mb-4 msg">Far far away, behind the word mountains, far from the
+                                            countries Vokalia and Consonantia, there live the blind texts.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide bg-orange-100" role="group" aria-label="3 / 4" style="width: 493.333px; margin-right: 16px;" data-swiper-slide-index="2">
+                    <div class="p-9 text-gray-800 m-3">
+                        <div class="mb-2">
+                            <div class="item tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+                                <div>
+                                    <div class="text-gray-800">
+                                        <div class="mb-4 flex items-center ">
+                                            <div class="rounded-full w-20 h-20 bg-cover bg-center bg-[url('/Images/g6.jpg')] relative">
+                                                <div class=" absolute bottom-0 right-0 text-xl bg-white h-7 w-7 rounded-full flex items-center justify-center">
+                                                    <span class="text-orange-400 fa fa-quote-left"></span>
+                                                </div>
+                                            </div>
+                                            <div class="ps-3 ml-3">
+                                                <p class="name text-xl font-[600] uppercase">Roger Scott</p>
+                                                <span class="position text-slate-700">Marketing Manager</span>
+                                            </div>
+                                        </div>
+                                        <p class="mb-4 msg">Far far away, behind the word mountains, far from the
+                                            countries Vokalia and Consonantia, there live the blind texts.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide bg-orange-100 swiper-slide-prev" role="group" aria-label="4 / 4" style="width: 493.333px; margin-right: 16px;" data-swiper-slide-index="3">
+                    <div class="p-9 text-gray-800 m-3">
+                        <div class="mb-2">
+                            <div class="item tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+                                <div>
+                                    <div class="text-gray-800">
+                                        <div class="mb-4 flex items-center ">
+                                            <div class="rounded-full w-20 h-20 bg-cover bg-center bg-[url('/Images/g6.jpg')] relative">
+                                                <div class=" absolute bottom-0 right-0 text-xl bg-white h-7 w-7 rounded-full flex items-center justify-center">
+                                                    <span class="text-orange-400 fa fa-quote-left"></span>
+                                                </div>
+                                            </div>
+                                            <div class="ps-3 ml-3">
+                                                <p class="name text-xl font-[600] uppercase">Roger Scott</p>
+                                                <span class="position text-slate-700">Marketing Manager</span>
+                                            </div>
+                                        </div>
+                                        <p class="mb-4 msg">Far far away, behind the word mountains, far from the
+                                            countries Vokalia and Consonantia, there live the blind texts.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="swiper-slide bg-orange-100 swiper-slide-duplicate swiper-slide-active" role="group" aria-label="1 / 4" style="width: 493.333px; margin-right: 16px;" data-swiper-slide-index="0">
+                    <div class="p-9 text-gray-800 m-3">
+                        <div class="mb-2">
+                            <div class="item tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+                                <div>
+                                    <div class="text-gray-800">
+                                        <div class="mb-4 flex items-center ">
+                                            <div class="rounded-full w-20 h-20 bg-cover bg-center bg-[url('/Images/g6.jpg')] relative">
+                                                <div class=" absolute bottom-0 right-0 text-xl bg-white h-7 w-7 rounded-full flex items-center justify-center">
+                                                    <span class="text-orange-400 fa fa-quote-left"></span>
+                                                </div>
+                                            </div>
+                                            <div class="ps-3 ml-3">
+                                                <p class="name text-xl font-[600] uppercase">Roger Scott</p>
+                                                <span class="position text-slate-700">Marketing Manager</span>
+                                            </div>
+                                        </div>
+                                        <p class="mb-4 msg">Far far away, behind the word mountains, far from the
+                                            countries Vokalia and Consonantia, there live the blind texts.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="swiper-slide bg-orange-100 swiper-slide-duplicate swiper-slide-next" role="group" aria-label="2 / 4" style="width: 493.333px; margin-right: 16px;" data-swiper-slide-index="1">
+                    <div class="p-9 text-gray-800 m-3">
+                        <div class="mb-2">
+                            <div class="item tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+                                <div>
+                                    <div class="text-gray-800">
+                                        <div class="mb-4 flex items-center ">
+                                            <div class="rounded-full w-20 h-20 bg-cover bg-center bg-[url('/Images/g6.jpg')] relative">
+                                                <div class=" absolute bottom-0 right-0 text-xl bg-white h-7 w-7 rounded-full flex items-center justify-center">
+                                                    <span class="text-orange-400 fa fa-quote-left"></span>
+                                                </div>
+                                            </div>
+                                            <div class="ps-3 ml-3">
+                                                <p class="name text-xl font-[600] uppercase">Roger Scott</p>
+                                                <span class="position text-slate-700">Marketing Manager</span>
+                                            </div>
+                                        </div>
+                                        <p class="mb-4 msg">Far far away, behind the word mountains, far from the
+                                            countries Vokalia and Consonantia, there live the blind texts.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="swiper-slide bg-orange-100 swiper-slide-duplicate" role="group" aria-label="3 / 4" style="width: 493.333px; margin-right: 16px;" data-swiper-slide-index="2">
+                    <div class="p-9 text-gray-800 m-3">
+                        <div class="mb-2">
+                            <div class="item tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+                                <div>
+                                    <div class="text-gray-800">
+                                        <div class="mb-4 flex items-center ">
+                                            <div class="rounded-full w-20 h-20 bg-cover bg-center bg-[url('/Images/g6.jpg')] relative">
+                                                <div class=" absolute bottom-0 right-0 text-xl bg-white h-7 w-7 rounded-full flex items-center justify-center">
+                                                    <span class="text-orange-400 fa fa-quote-left"></span>
+                                                </div>
+                                            </div>
+                                            <div class="ps-3 ml-3">
+                                                <p class="name text-xl font-[600] uppercase">Roger Scott</p>
+                                                <span class="position text-slate-700">Marketing Manager</span>
+                                            </div>
+                                        </div>
+                                        <p class="mb-4 msg">Far far away, behind the word mountains, far from the
+                                            countries Vokalia and Consonantia, there live the blind texts.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div></div>
+            <div class="swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" aria-current="true"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+    </section>
+    <section>
+        <p class="text-base text-orange-400  text-center mb-2">Our Blog</p>
+        <h4 class="md:text-4xl text-2xl text-gray-700 text-center font-semibold mb-10">Recent Blog</h4>
+        <div class="lg:container mx-auto">
+            <div class="flex md:flex-row flex-col">
+                <div class="shadow-lg m-3">
+                    <img src="./Images/f1.jpg">
+                    <div class="p-4">
+                        <p>
+                            <span class="ml-2"><i class="fa fa-user  text-orange-400 mr-2"></i>Admin</span>
+                            <span class="ml-2"><i class="fa fa-comment mr-2 text-orange-400"></i> 3 Comments</span>
+                        </p>
+                        <div class="mt-3">
+                            <p class="lg:text-2xl text-xl hover:underline font-medium transition duration-300 cursor-pointer">Biggest Construction in New York, USA</p>
+                        </div>
+                        <p class="text-gray-700 mt-3">A small river named Duden flows by their place and supplies it
+                            with the necessary regelialia.
+                        </p>
+                    </div>
+                  
+                </div>
+                <div class="shadow-lg m-3">
+                    <img src="./Images/f1.jpg">
+                    <div class="p-4">
+                        <p>
+                            <span class="ml-2"><i class="fa fa-user  text-orange-400 mr-2"></i>Admin</span>
+                            <span class="ml-2"><i class="fa fa-comment mr-2 text-orange-400"></i> 3 Comments</span>
+                        </p>
+                        <div class="mt-3">
+                            <p class="lg:text-2xl text-xl hover:underline font-medium transition duration-300 cursor-pointer">Biggest Construction in New York, USA</p>
+                        </div>
+                        <p class="text-gray-700 mt-3">A small river named Duden flows by their place and supplies it
+                            with the necessary regelialia.
+                        </p>
+                    </div>
+                  
+                </div>
+                <div class="shadow-lg m-3">
+                    <img src="./Images/f1.jpg">
+                    <div class="p-4">
+                        <p>
+                            <span class="ml-2"><i class="fa fa-user  text-orange-400 mr-2"></i>Admin</span>
+                            <span class="ml-2"><i class="fa fa-comment mr-2 text-orange-400"></i> 3 Comments</span>
+                        </p>
+                        <div class="mt-3">
+                            <p class="lg:text-2xl text-xl hover:underline font-medium transition duration-300 cursor-pointer">Biggest Construction in New York, USA</p>
+                        </div>
+                        <p class="text-gray-700 mt-3">A small river named Duden flows by their place and supplies it
+                            with the necessary regelialia.
+                        </p>
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container mx-auto md:py-36 py-20">
+       
+        <div class="container mx-auto flex lg:flex-row flex-col gap-5">
+            <div class=" p-3 flex-1">
+                <div class="mb-16">
+                    <p class=" text-sm leading-7 uppercase text-orange-400">
+                        Drop A Message
+                    </p>
+                    <div class="text-3xl leading-normal ">
+                        Request A Quote
+                    </div>
+                </div>
+
+                <form class="w-full">
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                            <label class="block uppercase tracking-wide text-gray-700 text-sm mb-2" for="grid-first-name">
+                                Your Full Name
+                            </label>
+                            <input class="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-first-name" type="text" placeholder="raj">
+                        </div>
+                        <div class="w-full md:w-1/2 px-3">
+                            <label class="block uppercase tracking-wide text-gray-700 text-sm mb-2" for="grid-last-name">
+                                Email Address
+                            </label>
+                            <input class="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="abc@gmail.com">
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="w-full px-3">
+                            <label class="block uppercase tracking-wide text-gray-700 text-sm mb-2" for="grid-password">
+                                Email Address
+                            </label>
+                            <input class="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-email" type="email" placeholder="abc@gmail.com">
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="w-full px-3">
+                            <label class="block uppercase tracking-wide text-gray-700 text-sm mb-2" for="grid-password">
+                                Your Message
+                            </label>
+                            <textarea rows="10" class="appearance-none block w-full text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 resize-none">              </textarea>
+                        </div>
+                        <div class="flex justify-between w-full px-3  sm:flex-row flex-col">
+                            <div class="md:flex md:items-center">
+                                <label class="block text-gray-700">
+                                    <input class="mr-2 leading-tight" type="checkbox">
+                                    <span class="text-sm">
+                                        Send me your newsletter!
+                                    </span>
+                                </label>
+                            </div>
+                            <button class="shadow bg-orange-400 hover:bg-slate-700 focus:shadow-outline focus:outline-none text-white py-2 px-6" type="submit">
+                                Send Message
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="p-3 flex-1">
+                <p class="text-orange-400 mb-3">Frequently Ask Question</p>
+                <h4 class="text-gray-700 md:text-5xl text-xl  font-[500]">You Want To Ask Something From Us?</h4>
+                <p class="text-gray-500 my-5">A small river named Duden flows by their place and supplies it with the
+                    necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into
+                    your mouth.</p>
+                <div class="bg-white w-full border border-gray-200 divide-y divide-gray-200">
+                    <details>
+                      <summary class="question py-3 px-4 cursor-pointer select-none w-full outline-none">How is this made?</summary>
+                      <p class="pt-1 pb-3 px-4">With the HTML5 <code class="text-sm text-red-500">details</code> element and some Tailwind for showcase.</pre>
+                    </details>
+                    <details>
+                      <summary class="question py-3 px-4 cursor-pointer select-none w-full">Can I use it?</summary>
+                      <p class="pt-1 pb-3 px-4">Of course. It's yours to use wherever and whenever you like.</p>
+                    </details>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <footer>
+        <div class="bg-gray-800 pt-12">
+            <div class="container mx-auto">
+                <div class="flex md:flex-row flex-col md:p-0 p-3">
+                    <div class="lg:w-1/3 md:px-3">
+                        <h4 class=" text-2xl mb-4 uppercase text-orange-400 hover:text-white cursor-pointer">
+                            BUILDREAM</h4>
+                        <p class="text-gray-400">A small river named Duden flows by their place and supplies it with the
+                            necessary regelialia.</p>
+                        <div class="mt-4 flex">
+                            <button class="group bg-facebook text-white bg-orange-400 rounded mt-2 transition-colors duration-300 h-10 w-10 flex items-center justify-center hover:bg-white">
+                                <span class="fab fa-facebook-f group-hover:text-orange-400"></span>
+                            </button>
+                            <button class="group bg-twitter text-white bg-orange-400 rounded ml-2 mt-2 transition-colors duration-300 h-10 w-10 flex items-center justify-center hover:bg-white">
+                                <span class="fab fa-twitter group-hover:text-orange-400"></span>
+                            </button>
+                            <button class="group bg-twitter text-white bg-orange-400 rounded ml-2 mt-2 transition-colors duration-300 h-10 w-10 flex items-center justify-center hover:bg-white">
+                                <span class="fa-brands fa-instagram  group-hover:text-orange-400"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 lg:w-1/3 md:px-3  mt-12 lg:mt-0">
+                        <div class="sm:flex justify-between">
+                            <div class="sm:flex-1">
+                                <h6 class="text-base font-medium text-white uppercase mb-2">Services</h6>
+                                <div>
+                                    <a href="#" class="text-gray-400 py-1 block decoration-0 hover:text-orange-400">Biggest
+                                        Construction in New York, USA</a>
+                                    <a href="#" class="text-gray-400 py-1 block decoration-0 hover:text-orange-400">Biggest
+                                        Construction in New York, USA</a>
+                                    <a href="#" class="text-gray-400 py-1 block decoration-0 hover:text-orange-400">Biggest
+                                        Construction in New York, USA</a>
+                                    <a href="#" class="text-gray-400 py-1 block decoration-0 hover:text-orange-400">Biggest
+                                        Construction in New York, USA</a>
+                                </div>
+                            </div>
+                            <div class="sm:flex-1 mt-4 sm:mt-0 flex  sm:items-center items-start md:items-end flex-col">
+                                <h6 class="text-base font-medium text-white uppercase mb-2 mr-3">Quick Links</h6>
+                                <div class="">
+                                    <a href="#" class="text-gray-400 py-1 block decoration-0 hover:text-orange-400">
+                                        <i class="fa-solid fa-angle-right mr-2"></i>Home</a>
+                                    <a href="#" class="text-gray-400 py-1 block decoration-0 hover:text-orange-400"><i class="fa-solid fa-angle-right mr-2"></i>About</a>
+                                    <a href="#" class="text-gray-400 py-1 block decoration-0 hover:text-orange-400"><i class="fa-solid fa-angle-right mr-2"></i>Services</a>
+                                    <a href="#" class="text-gray-400 py-1 block decoration-0 hover:text-orange-400"><i class="fa-solid fa-angle-right mr-2"></i>Project</a>
+                                    <a href="#" class="text-gray-400 py-1 block decoration-0 hover:text-orange-400"><i class="fa-solid fa-angle-right mr-2"></i>Pricing</a>
+                                    <a href="#" class="text-gray-400 py-1 block decoration-0 hover:text-orange-400"><i class="fa-solid fa-angle-right mr-2"></i>Contact
+                                        Us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/3 md:px-3 md:text-center mt-12 lg:mt-0">
+                        <h5 class="text-lg text-white font-medium mb-4">Have a Questions?</h5>
+                        <button class="bg-orange-400 text-white hover:bg-white hover:text-slate-700 rounded py-2 px-3 lg:px-12 transition-colors duration-300 lg:text-base text-sm">Send
+                            Message</button>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 py-8 border-t border-gray-900 border-solid">
+                <div class="container mx-auto md:px-0 px-4">
+                    <p class="text-center text-gray-300 text-sm">Copyright © 20222022 All rights reserved | This template is made with <i class="fa fa-heart color-danger" aria-hidden="true"></i>  by Colorlib</p>
+                </div>
+            </div>
+        </div>
+       
+    </footer>
+    
+
+   <!-- Swiper JS -->
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+   <!-- Initialize Swiper -->
+   <script>
+       var swiper = new Swiper(".mySwiper", {
+           slidesPerView: 3,
+           grid: {
+               rows: 1,
+           },
+           spaceBetween: 16,
+           pagination: {
+               el: ".swiper-pagination"
+           },
+           paginationClickable: true,
+           autoplay: true,
+           loop: true,
+           breakpoints: {
+               // when window width is >= 320px
+               265: {
+                   slidesPerView: 1,
+                   spaceBetween: 16
+               },
+               // when window width is >= 480px
+               480: {
+                   slidesPerView: 1,
+                   spaceBetween: 16
+               },
+               // when window width is >= 640px
+               640: {
+                   slidesPerView: 2,
+                   spaceBetween: 16
+               },
+               1124: {
+                   slidesPerView: 3,
+                   spaceBetween: 16
+               }
+           },
+       });
+   </script>
+</body>
+</html>
